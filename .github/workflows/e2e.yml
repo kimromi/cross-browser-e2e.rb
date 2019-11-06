@@ -23,7 +23,6 @@ jobs:
           brew tap homebrew/cask-versions
           brew cask install safari-technology-preview
           sudo /Applications/Safari\ Technology\ Preview.app/Contents/MacOS/safaridriver --enable
-          /Applications/Safari\ Technology\ Preview.app/Contents/MacOS/safaridriver -p 0 &
       - run: bundle install
       - run: bundle exec rspec
         env:

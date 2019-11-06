@@ -12,7 +12,6 @@ Capybara.register_driver :selenium_safari do |app|
   Selenium::WebDriver::Safari::Service.driver_path = Selenium::WebDriver::Safari.technology_preview
   options = Selenium::WebDriver::Safari::Options.new
   Capybara::Selenium::Driver.new(app, browser: :safari, options: options)
-
 end
 
 Capybara.register_driver :selenium_firefox do |app|
