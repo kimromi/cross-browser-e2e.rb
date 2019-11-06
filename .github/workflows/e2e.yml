@@ -19,6 +19,11 @@ jobs:
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6.x'
+      - run: |
+          brew tap homebrew/cask-versions
+          brew cask install safari-technology-preview
+          sudo /Applications/Safari\ Technology\ Preview.app/Contents/MacOS/safaridriver --enable
+          /Applications/Safari\ Technology\ Preview.app/Contents/MacOS/safaridriver -p 0 &
       - run: bundle install
       - run: bundle exec rspec
         env:
